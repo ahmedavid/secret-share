@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Secret } from 'src/app/_models/interfaces';
 import { SecretService } from 'src/app/_services/secret.service';
 import {Clipboard} from '@angular/cdk/clipboard';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-secret-created',
@@ -31,7 +32,7 @@ export class SecretCreatedComponent implements OnInit {
   }
 
   copyToClipboard() {
-    console.log(this.clipboard.copy("http://localhost:4200/secret/view/"+this.secret?.id))
+    console.log(this.clipboard.copy(`http://${environment.apiUrl}:4200/secret/view/`+this.secret?.id))
     this.secretLinkCopied = true
   }
 }
