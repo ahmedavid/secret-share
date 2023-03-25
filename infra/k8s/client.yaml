@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: ahmeavid/secret-share-client:latest
+        image: ahmedavid/secret-share-client:latest
         ports:
         - containerPort: 80
 ---

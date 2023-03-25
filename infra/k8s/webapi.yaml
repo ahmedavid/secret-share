@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webapi
-        image: ahmeavid/secret-share-api:latest
+        image: ahmedavid/secret-share-api:latest
         ports:
         - containerPort: 80
 ---
