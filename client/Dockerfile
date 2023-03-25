@@ -16,11 +16,9 @@ RUN npm install -g @angular/cli@14.0.7
 COPY . /app
 
 # generate build
-# RUN npm run start
-
-EXPOSE 4200
-ENTRYPOINT [ "npm", "run", "start" ]
+# RUN ng build --prod
+RUN ng serve -host=0.0.0.0 --port=4200 --disable-host-check
 
 # production environment
 # FROM nginx:1.16.0-alpine
-# COPY --from=build /app/dist/your-project-name /usr/share/nginx/html
+# COPY --from=build /app/dist/client /usr/share/nginx/html
