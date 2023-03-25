@@ -17,7 +17,8 @@ COPY . /app
 
 # generate build
 # RUN ng build --prod
-RUN ng serve -host=0.0.0.0 --port=4200 --disable-host-check
+EXPOSE 4200
+ENTRYPOINT ["ng", "serve" "-host=0.0.0.0" "--port=4200" "--disable-host-check"]
 
 # production environment
 # FROM nginx:1.16.0-alpine
