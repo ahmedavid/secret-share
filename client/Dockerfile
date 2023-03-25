@@ -16,7 +16,10 @@ RUN npm install -g @angular/cli@14.0.7
 COPY . /app
 
 # generate build
-RUN npm run start
+# RUN npm run start
+
+EXPOSE 4200
+ENTRYPOINT [ "npm", "run", "start" ]
 
 # production environment
 # FROM nginx:1.16.0-alpine
