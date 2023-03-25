@@ -32,7 +32,7 @@ export class SecretCreatedComponent implements OnInit {
   }
 
   copyToClipboard() {
-    console.log(this.clipboard.copy(`http://${environment.apiUrl}:4200/secret/view/`+this.secret?.id))
+    console.log(this.clipboard.copy(`http://client.davidahmadov.net/secret/view/`+this.secret?.id))
     this.secretLinkCopied = true
   }
 }
