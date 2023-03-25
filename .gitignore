@@ -1,0 +1,4 @@
+API/bin
+API/obj
+API/secret.db
+client/node_modules
