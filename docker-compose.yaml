@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  webapi:
+    image: ahmedavid/secret-share-api:latest
+    ports:
+    - "80:80"
+  client:
+    image: ahmedavid/secret-share-client:latest
+    ports:
+    - "4200:4200"
