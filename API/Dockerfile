@@ -6,6 +6,7 @@ RUN dotnet restore
 
 COPY . ./
 RUN dotnet publish -c Release -o out
+RUN dotnet ef database update
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-focal
 WORKDIR /app
