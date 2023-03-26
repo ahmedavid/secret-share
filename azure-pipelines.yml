@@ -10,7 +10,7 @@ trigger:
 - main
 
 pool:
-  vmImage: vmImageName
+  vmImage: $(vmImageName)
 
 stages:
   - stage: Build
@@ -18,7 +18,7 @@ stages:
     jobs:
       - job: Build
         displayName: Build
-        pool: vmImageName
+        pool: $(vmImageName)
         steps:
         - task: Docker@2
           displayName: Build&Push secret-share-client
