@@ -25,7 +25,7 @@ stages:
           displayName: Build&Push secret-share-client
           inputs:
             containerRegistry: 'my-dockerhub'
-            repository: 'secret-share-client'
+            repository: 'ahmedavid/secret-share-client'
             command: 'buildAndPush'
             Dockerfile: '**/client/Dockerfile'
             tags: |
