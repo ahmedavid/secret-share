@@ -33,7 +33,7 @@ export class SecretCreatedComponent implements OnInit {
     }
   }
   getLink(secretId: string) {
-    return environment.apiUrl + 'secret/view/' + secretId 
+    return environment.clientUrl + 'secret/view/' + secretId 
   }
 
   copyToClipboard() {

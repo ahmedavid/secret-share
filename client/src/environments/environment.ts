@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://webapi.davidahmadov.net/api/',
+  clientUrl: 'http://client.davidahmadov.net/'
 };
 
 /*
