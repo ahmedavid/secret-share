@@ -30,4 +30,4 @@ stages:
             Dockerfile: '**/client/Dockerfile'
             tags: |
               $(Build.BuildId)
-              'latest'
+              latest
