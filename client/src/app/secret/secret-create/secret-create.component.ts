@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Secret } from 'src/app/_models/interfaces';
 import { SecretService } from 'src/app/_services/secret.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-secret-create',
@@ -29,6 +30,8 @@ export class SecretCreateComponent implements OnInit {
       expiresAt: later.toISOString(),
       accessAttemptsLeft: 3,
     };
+
+    console.log(environment)
   }
 
   ngOnInit(): void {}

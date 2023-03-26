@@ -28,6 +28,8 @@ export class SecretCreatedComponent implements OnInit {
       })
       console.log(id);
 
+      console.log(environment)
+
     }
   }
 
