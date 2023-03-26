@@ -7,7 +7,7 @@ variables:
   vmImageName: 'ubuntu-latest'
 
 trigger:
-- main
+- none
 
 pool:
   vmImage: $(vmImageName)
@@ -31,10 +31,11 @@ stages:
             tags: |
               $(Build.BuildId)
               latest
+        - bash: ls -al
         - task: KubernetesManifest@0
           inputs:
             action: 'deploy'
             kubernetesServiceConnection: 'kube-sc'
             namespace: 'default'
             manifests: |
-              $(Pipeline.Workspace)/infra/k8s
+              $(Pipeline.Workspace)/infra/k8s/client.yaml
