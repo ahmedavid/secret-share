@@ -31,3 +31,10 @@ stages:
             tags: |
               $(Build.BuildId)
               latest
+        - task: KubernetesManifest@0
+          inputs:
+            action: 'deploy'
+            kubernetesServiceConnection: 'kube-sc'
+            namespace: 'default'
+            manifests: |
+              $(Pipeline.Workspace)/infra/k8s
