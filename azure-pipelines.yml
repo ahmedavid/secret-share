@@ -40,4 +40,4 @@ stages:
             kubernetesServiceConnection: 'kube-sc'
             namespace: 'default'
             manifests: |
-              $(System.DefaultWorkingDirectory)/infra/k8s/client.yaml
+              $(System.DefaultWorkingDirectory)/infra/k8s/*.yaml
