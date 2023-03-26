@@ -28,6 +28,8 @@ stages:
             repository: 'ahmedavid/secret-share-client'
             command: 'buildAndPush'
             Dockerfile: '**/client/Dockerfile'
+            addBaseImageData: false
+            addPipelineData: false
             tags: |
               $(Build.BuildId)
               latest
