@@ -33,6 +33,18 @@ stages:
             tags: |
               $(Build.BuildId)
               latest
+        - task: Docker@2
+          displayName: Build&Push website
+          inputs:
+            containerRegistry: 'my-dockerhub'
+            repository: 'ahmedavid/website'
+            command: 'buildAndPush'
+            Dockerfile: '**/website/Dockerfile'
+            addBaseImageData: false
+            addPipelineData: false
+            tags: |
+              $(Build.BuildId)
+              latest
         - bash: ls -al
         - task: KubernetesManifest@0
           inputs:
